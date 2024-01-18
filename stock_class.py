@@ -7,9 +7,11 @@ Louie Santino Venegas
 import warnings
 
 class Stock:
-    def __init__(self, symbol, name, shares):
+    def __init__(self, symbol, name, shares=0.0):
         if not symbol or not name:
-           warnings.warn("You must include a symbol and a name.",UserWarning)
+           warnings.warn("You must include a symbol and a name.", UserWarning)
+        if shares < 0:
+            warnings.warn("Shares cannot be negative.", UserWarning)
         self.symbol = symbol
         self.name = name
         self.shares = shares
@@ -38,6 +40,13 @@ def main():
     print("Testing Add Stock...",end="")
     try:
         testStock = Stock("TEST","Test Company",100)
+        print(teststock.name, teststock.symbol, teststock.shares)
+        if teststock.symbol == "test" and teststock.name == "Test Company" and teststock.shares == 100:
+            print("successfull")
+        else:
+            print("*** ERROR! Constructor error..")
+            error_count = error_count+1
+            error_list.append("Constructor values do not match")
         print("Successful!")
     except:
         print("***Adding Stock Failed!")

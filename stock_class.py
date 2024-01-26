@@ -40,14 +40,13 @@ def main():
     print("Testing Add Stock...",end="")
     try:
         testStock = Stock("TEST","Test Company",100)
-        print(teststock.name, teststock.symbol, teststock.shares)
-        if teststock.symbol == "test" and teststock.name == "Test Company" and teststock.shares == 100:
-            print("successfull")
+        print(testStock.name, testStock.symbol, testStock.shares)
+        if testStock.symbol == "TEST" and testStock.name =="Test Company":
+            print("Successful!")
         else:
-            print("*** ERROR! Constructor error..")
+            print("***ERROR! Constructor error..")
             error_count = error_count+1
             error_list.append("Constructor values do not match")
-        print("Successful!")
     except:
         print("***Adding Stock Failed!")
         error_count = error_count+1

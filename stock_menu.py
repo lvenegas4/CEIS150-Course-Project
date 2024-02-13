@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+1# -*- coding: utf-8 -*-
 """
 02/09/2024
 Louie Santino Venegas d41112084 ceis150
